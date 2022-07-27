@@ -1,0 +1,133 @@
+* {
+	transition-duration: 0.3s;
+}
+
+section {
+	background-color: #F4F2FF;
+	width: 100%;
+	box-shadow: 0 0 39px 5px #00000044;
+	overflow: auto;
+	height: 100vh;
+}
+
+aside {
+	background-color: #fff;
+	height: 100%;
+	box-shadow: 9px 0 22px 0 #8780b560;
+	overflow: auto;
+}
+
+.light-btn {
+	background-color: #7B6CDB45;
+	box-shadow: 3px 3px 5px #9888FF99;
+	border-radius: 5px;
+	position: relative;
+	overflow: visible;
+}
+
+.nav-item {
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+}
+
+.nav-item {
+	position: relative;
+}
+
+.nav-item .nav-link {
+	font-weight: bolder !important;
+}
+
+.nav-item.active {
+	background-color:  var(--color2);
+}
+
+.nav-item.active .nav-link {
+	font-weight: bold !important;
+	letter-spacing: 2.5px;
+	color: white !important;
+}
+
+*::-webkit-scrollbar {
+	background-color: transparent;
+	width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+	background-color: #9888FF00;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #9888FF;
+	border-radius: 20px;
+	box-shadow: 2px 0 10px 2px #cccccc44 inset;
+}
+
+.content {
+	height: 100% !important;
+	overflow: auto;
+}
+
+section[data-sidebar-size="max"] aside {
+	width: 190px;
+}
+
+section[data-sidebar-size="min"] aside {
+	width: 70px;
+}
+
+section[data-sidebar-hide="true"] aside {
+	transform: translateX(-110%);
+}
+
+section[data-sidebar-size="max"] .content {
+	margin-left: 190px;
+}
+
+section[data-sidebar-size="min"] .content {
+	margin-left: 70px;
+}
+
+section[data-sidebar-hide="true"] .content {
+	margin-left: 0;
+}
+
+section[data-sidebar-size="max"] .sidebar-max-text {
+	display: initial;
+}
+
+section[data-sidebar-size="min"] .sidebar-max-text {
+	display: none;
+}
+
+section[data-sidebar-hide="true"] .sidebar-max-text {
+	display: none;
+}
+
+section[data-sidebar-size="max"] .sidebar-logo {
+	width: 80px;
+}
+
+section[data-sidebar-size="min"] .sidebar-logo {
+	width: 40px;
+}
+
+section[data-sidebar-hide="true"] aside {
+	transform: translateX(-110%);
+}
+
+input[disabled], textarea[disabled]{
+	background-color: #F8F9FA !important;
+}
+.tooltip-inner {
+	max-width: 236px !important;
+	height: auto;
+	font-size: 15px;
+	background: var(--color1);
+	color: #fff;
+	font-weight: bold;
+	text-align: left;
+	box-shadow: 0 0 5px #ccc;
+}
+

@@ -1,0 +1,118 @@
+
+* {
+    font-family: "poppins", sans-serif;
+}
+
+*::selection {
+    background-color: var(--color4);
+    color: #fff;
+}
+
+.popover {
+    z-index: 20000;
+}
+
+.popover-header {
+    background-color: transparent !important;
+    border: none;
+    color: #0C0061;
+    padding-bottom: 0;
+}
+
+.popover-body {
+    padding-top: 3px;
+}
+
+body {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.nav-item .active {
+    background-color: transparent !important;
+    position: relative;
+    color: #1F00F2 !important;
+    font-weight: bold;
+    transition-duration: 0.4s;
+}
+
+.nav-item .active::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #1F00F2;
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-item .active::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #1F00F2;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: nav_underline 0.3s 1;
+}
+
+.nav-item .active::after {
+    width: 100%;
+}
+
+.nav-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition-duration: 0.3s;
+    box-shadow: none;
+}
+
+@media only screen and (min-width: 992px) {
+    .nav-item .nav-link {
+        font-size: 18px !important;
+    }
+    .mobile-nav {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(105%);
+    z-index: 10000;
+    background-color: #fff;
+    box-shadow: 0 0 5px 10px #11111111;
+    height: 100vh;
+    padding: 20px 40px;
+    transition-duration: 0.4s;
+}
+
+@media only screen and (max-width: 991px) {}
+
+@keyframes nav_underline {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+*::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #0C0061;
+    width: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 2px 21px 11px 2px #00000055 inset;
+}
